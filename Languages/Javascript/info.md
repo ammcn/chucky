@@ -1,7 +1,9 @@
-### Javascript(JS) - [Oracle](../../Terms/company_oracle.md)
+### Javascript(JS)
 
 ##### General Info
-- Core Technology of [WWW](../../Terms/world_wide_web.md)
+- [Scripting Language](../../Terms/scripting_language.md) that adds interactivity to websites
+
+- Core Technology of World Wide Web
 
 - All major web browsers have a dedicated [engine](../../Terms/engine.md) for executing JS
 
@@ -21,7 +23,7 @@
 
 - [API](../../Terms/api.md) for working with text, dates, [regex](../../Terms/regex.md), standard [data structures](../../Terms/data_structures.md) and [DOM](../../Terms/dom.md)
 
-- Previously only used in web browsers, now used in servers & variety of applications. Most popular [Run time system](../../Terms/run_time_system.md) of this is [Node.js](../Node/info.md)
+- Previously only used in web browsers, now used in servers & variety of applications. Most popular [Run time system](../../Terms/run_time_system.md) of this is [Node.js](../../Terms/node.md)
 
 
 ##### Supports
@@ -30,3 +32,6 @@
 - [Functional](../../Terms/functional.md) programming style
 
 - [Imperative](../../Terms/imperative.md) programming style
+
+
+##### News
