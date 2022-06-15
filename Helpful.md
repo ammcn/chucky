@@ -7,7 +7,7 @@
 
 
 ##### Commits
-Brief description of what was accomplished
+Single sentence of what was accomplished, followed by greater explanation.
 
 
 ##### Extensions
