@@ -2,9 +2,31 @@
 - Way of organizing data in computers so operations dealing with them can be more efficient
 
 ###### TYPES of data structures
-- *Arrays*: Structure with fixed size(can't delete/insert), can hold data types & arrays(2-dimensional array), also indexed
-  - *Associative Arrays*: Every key can only appear once
+- *Primative/In-built/Primary Data Type*: Basic data types that contructs other data types. Base, data-type building block
 
+- *Abstract/Non-Built-In Data Type*: Object who's behavior is defined by a set of values and operations, does not specify how operations are to be implemented. User only needs to know what data type can do.
+  - List(see below)
+  - Stack(see below)
+  - Queue(see below)
+  - Features necessary when creating an ADT:
+    - Abstraction: No need for user to know implementation
+    - Good Conceptualization: Gives us understanding of how to develop in the real world
+    - Robust: Thought through and the ability to catch errors
+
+
+- *Arrays*: Structure with fixed size(can't delete/insert), can hold data types & arrays(2-dimensional array), also indexed
+  - Doesn't requires metadata
+  - *Associative Arrays*:
+    - Can be called Dict. Every key can only appear once, keys can be more any of allowed data-types/not limited to int. [Mapping](../../Terms/mapping.md): "Every value is mapped/associated to a key"
+    - No user specified max cardinality, unlike simple array max cardinality is defined when array itself is defined  
+    - Index values can be sparse
+  - Inserting & Deleting items in list, it is more efficient to use linked lists while modifying an element at n'th position is faster with an array
+
+  - Could be called dynamic array
+  - Index values must be contiguous set of integers
+  - Fixed size, created during run time
+  - Not cache friendly, array elements are contiguous(not all stored next to eachother)
+  
   - Can traverse/iterate
   - Can search by value/index
   - Can update value by index
@@ -17,14 +39,22 @@
   - Used as building block for other data structures(array lists, heaps, hash tables, vectors & matrices)
   - Used for sorting [algorithms](../../Terms/algorithms.md)(insertion sort, quick sort, bubble sort & merge sort)
 
+  - Implementation:
+    - [JS](../Languages/Javascript/DataStructures/array.js)
+
 
 - *Linked Lists*: Sequential structure with linear nodes that point to eachother, unable to access data randomly
+  - Requires metadata
+  - Dynamic size, unlike arrays. Max value can always increase by adding another node with a pointer to it. Each item is stored non-contiguously
+  - If dealing with data sets that have uncertainty with size and complexity, use linked lists over arrays. Although linked-lists use more memory initially, it can be more efficient when dealing with complex/changing sets of data
+  - Inserting & Deleting items in list, it is more efficient to use linked lists while modifying an element at n'th position is faster with an array
+
   - Elements in a linked list are known as nodes
   - Each node contains a key & pointer, pointing to the successor, known as "next"
   - Head attribute points to first element in linked list
   - Last element is known as tail, points to `null`
 
-  - Can access nth element in O(n) time
+  - Can access nth element in O(n) time, reads each element till n position is arrived at
   - Can search nth element in O(n) time
   - Can insert element in O(1), if we are already where we want to insert
   - Can delete element in O(1), if we are already know the address of soon to be deleted node
@@ -38,10 +68,12 @@
   - Can insert key, beginning, middle, end
   - Can delete node, beginning, middle, end
   
-  
   - Used for "symbol table management" in compiler design
   - Circular linked list is used for switching between programs "Alt + tab"
   - Used for hash tables, when key-value reaches length >1
+
+  - Implementation:
+    - [JS](../Languages/Javascript/DataStructures/linked_list.js)
 
 
 - *Stacks*: LIFO(Last In, First Out), resembles stack of items, like plates
