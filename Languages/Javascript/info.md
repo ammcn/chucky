@@ -1,4 +1,5 @@
 ### Javascript(JS)
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 ##### General Info
 - [Scripting Language](../../Terms/scripting_language.md) that adds interactivity to websites
