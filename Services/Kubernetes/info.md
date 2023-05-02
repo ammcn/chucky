@@ -49,3 +49,29 @@
 - StatefulSet avoids read/write inconsisties when pods go down and with multiple db pods, specifically meant for database pods
 
 - Databases are often hosted outside of kubernetes to avoid setting up StatefulSet
+
+- Multiple nodes are used to avoide downtime
+
+- Kubernetes opperates on two nodes:
+  - Master Node
+  - Slave Node
+
+- Each node has multiple pods inside of it
+
+- Worker nodes do the actual work
+
+- A node usually requires three things:
+  - Container Runtime is the first process that runs, typically docker
+  - kubelet schedules container run time and machine
+    - kubelet is responsible for starting pod with container, assigning resources, all based off configuration
+    - kubernetes cluster has multiple nodes, which contains pods
+    - Service catches requests and forwards to pods
+  - kube proxy forwards request, does best to be performant, prefers pods on same nodes
+
+- Master nodes have four processes:
+  - API Server, uses to deploy application server (kubelet, kubernetes api, gets request for any updates, authenticates)
+  - Scheduler, follows API Server, decides which worker node the pod or component will be scheduled. Judges based off resources(kubelet could be invoked by scheduler)
+  - Controller Manager, detects state changes like pod crashings, recovers cluster state and makes request to scheduler
+  - ETCD, key value store of cluster state, cluster brain. Every pod change gets saved to this dictionary. Application data is not stored in ETCD
+
+  - Kubernetes node can have multiple master nodes
